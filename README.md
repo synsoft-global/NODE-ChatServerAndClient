@@ -1,8 +1,18 @@
 NODE-ChatServerAndClient
 ========================
 
+Introduction:
+
+This is a basic chat server implemented using Node.js and MySql on server side. 
+The chat client has also been implemented using Node.js. Any other technology like iOS, etc can also be used to make a similar client maybe for other devices.
+
+Installation:
+
 1) First install Node.js.
 Link: http://nodejs.org/download/
+And then install MySQL Workbench.
+After installation run ChatServerDB.sql file in MYSQl.
+After run script chatserver database is created.
 
 2) Now open node.js command prompt and install socket.io using following command...
 npm install socket.io 
