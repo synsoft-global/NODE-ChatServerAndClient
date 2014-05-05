@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="chat.css" rel="stylesheet" type="text/css" />    
+    <script src="jquery.min.js" type="text/javascript"></script>    
+    <script type="text/javascript" src="http://192.168.0.32:2525/socket.io/socket.io.js"></script>
+    <!--Main Script where Application intract with Socket server -->
+    <script src="Main.js" type="text/javascript"></script>
+    <title>Chat Application</title>    
+</head>
+<body>
+    <!--// Main Div -->
+   <div class="main">
+        <div class="chat_win">
+            <!-- Hidden Fields and WleCome section -->
+            <div class="main_head" id="Hiddenfields">
+                <span id="userid" style="display: none;"></span>
+                <span id="hiddenusername" style="display: none;"></span>
+                <span id="hiddenHangoutid" style="display: none;"></span>
+                <span id="hiddenChatHistoryid"  style="display: none;"></span>
+                <h2>Chat Application</h2>
+                <!--// Welcome Section and Loguot button Section -->
+                <div id="viewid" style="float: right; display: none;">
+                    <b>Welcome <span id="idName"></span></b>
+                    <input id="logoutbtn"  title="idbtn" type="submit" value="Logout" />
+                </div><div class="clear"></div>
+            
+            </div>
+            <!--// Login  Section -->
+             <div class="log_sec" id="loginFields">
+                <section id="LoginSection">
+                    <h4><b>Login</b></h4>
+                    <div class="log_win">
+<div class="log_con">
+<label class="log_text">UserName</label>
+<span class="log_input"><input id="loginname" type="text" runat="server"  /></span>
+</div>
+<div class="log_con">
+<label class="log_text">Password</label>
+<span class="log_input"><input type="password"  id="loginpassword" runat="server"/></span>
+</div>
+
+
+<div class="log_con">
+<label class="log_text">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+<span class="log_input"><input type="button" id="loginbtn" value="LOGIN"/> <a href="#" onclick="toggelDiv()">Register</a></span>
+
+</div><div class="clear"></div>
+</div>
+                </section>
+            </div>
+            
+            <!--// Registration Section -->
+              <div class="log_sec" id="registrationDIV" style="display: none">
+                <h4>
+                    <b>Registration</b></h4>
+             
+                <div class="log_win">
+                <div class="log_con">
+                    <label class="log_text">UserName</label>
+                    <span class="log_input">
+              			<input id="usernametext" type="text" runat="server" maxlength="50" />
+                    </span>
+                </div>
+                <div class="log_con">
+                    <label class="log_text">Password</label><span class="log_input">
+                        <input type="password" id="passwordtext" maxlength="20" runat="server" /></span>
+                </div>
+                <div class="log_con">
+                    <label class="log_text">Email</label><span class="log_input">
+                        <input id="emailtext" type="text" maxlength="20" runat="server" /></span>
+                </div>
+                <div class="log_con">
+                    <label class="log_text">Name</label><span class="log_input">
+                        <input id="nametext" type="text" maxlength="20" runat="server" /></span>
+                </div>
+                <div class="log_con">
+                    <label class="log_text">Mobile No</label><span class="log_input">
+                        <input id="mobilenotext" type="text" maxlength="12" runat="server" /></span>
+                </div>
+                
+                <div class="log_con">
+                    <label class="log_text">&nbsp;</label> <span class="log_input">
+                        <input type="button" id="registerbtn" value="SAVE" />
+                        <a href="#" onclick="toggelDivLogin()">Back to Login</a></span>
+                </div><div class="clear"></div>
+                </div>
+            </div>
+            
+            <!--// Chat Detail Section -->
+              <div class="user_list" id="divfullmain">
+            
+                <div class="det_left" id="divfullonlineuser">
+                    <section id="OnlineUser" style="display:none;">
+                      <div class="con_tab">
+                      	 <ul>
+                            <li><a id="contactlist"  class="tableft active" onclick="toggelcontacts()" href="#tab1">Contacts</a></li>
+                            <li><a  class="tabright" id="recentlist" href="#tab2">Recent</a></li>                       
+                       	 </ul>
+                      </div>
+                      
+            		  <div class="on_rec_con">                        
+                         <ul class="on_usr_lst" id="userlistid"></ul> 
+                         <ul class="rec_usr_lst" style="display:none;" id="recentlistid">                         
+                         </ul> 
+                       </div> 
+                        
+                   </section>
+                </div>
+                
+                <div class="det_right" id="RightChatdiv">
+                    <section id="chatdetail" style="display: none">
+                    	<span class="text_con">
+                        <textarea id="chathistory" rows="16" readonly="true" cols="35">
+                        </textarea><br /></span>        
+                        <span class="srch_con"><input id="textmsgid" type="text" />
+                        <input id="submitbtn" title="idbtn" type="submit" value="Enter" /></span>
+                    </section>
+                </div><div class="clear"></div>
+            </div> 
+        </div>
+    </div>    
+</body>
+</html>

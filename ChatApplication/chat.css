@@ -1,0 +1,199 @@
+﻿body {
+    font-family: Arial;
+    font-weight: normal;
+}
+
+.active {
+    background: none repeat scroll 0 0 hsl(120, 100%, 25%) !important;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+    display: block;
+}
+
+.clear{clear:both;}
+
+.main{
+    width:100%;
+    height:auto;
+   }
+   
+.main_head{margin:0 0 30px 0;}
+   
+.chat_win{
+    border:1px solid #747474;
+    width:50%;
+    height:auto;    
+    padding:30px;
+    margin:0 auto;  
+	background:#f0f0f0;
+	border-radius:15px;
+}
+
+
+.main_head h2{margin:0 0 30px 0; width:100%; text-align:center;}
+
+.log_sec {
+    margin: 0 auto;
+}
+.user_list{ margin: 0 auto;}
+
+.log_win {
+    margin: 0 auto;
+    width: 500px;
+}
+
+.log_sec h4{margin:30px auto; width:500px;}
+
+.log_con{margin:0 0 10px 0; float:left; width:100%;}
+
+.log_text
+{
+    float:left;
+    width:40%;    
+}
+.log_input
+{
+    float:left;
+    width:60%;
+}
+
+
+
+.con_tab ul{ float: left;
+    margin: 0 0 15px;
+    padding: 0;}
+	
+
+
+.on_rec_con ul {margin:0; padding:0; float: left;}
+.on_rec_con ul li{ margin: 5px 0 0; list-style-type:none;}
+.on_rec_con ul li a{text-decoration:none;}
+.rec_usr_lst ul li a{text-decoration:none;}
+
+.log_input input[type="text"], input[type="password"]{width:100%; height:26px;}
+.srch_con > input[type="text"]{width:75%}
+.srch_con > input[type="text"],input[type="submit"]{height:26px;}
+
+.det_left {
+    float: left;
+    width: 50%;
+}
+
+.on_usr_lst ul {margin:0; padding:0; float: left;}
+.on_usr_lst h4 {
+    margin: 0;
+}
+
+.rec_usr_lst h4 {
+    margin: 0;
+}
+
+.det_left section {
+    float: left;}
+
+.con_tab ul li{ 
+    display: block;
+    float: left;
+    list-style-type: none;
+    margin: 0 10px 0 0;}
+
+.con_tab ul li a{
+border-radius: 5px;
+text-decoration: none;
+background: none repeat scroll 0 0 hsl(0, 0%, 74%);
+padding:5px;
+color:#fff;
+}
+ 
+.det_right {
+    float: right;
+    width: 50%;
+}
+
+
+
+.text_con{margin: 0 0 15px 0;
+float: left;}
+
+.text_con textarea {
+    width: 100%;
+}
+
+.tabmain
+{
+    float:left;
+    width:50px;
+    background-color:Gray;
+}
+
+.onlineUser
+{
+    color:hsl(240, 100%, 50%) !important;    
+}
+.ActiveUser
+{
+    color:Green !important; 
+    
+}
+.DeActiveUser
+{
+    color:Gray;    
+}
+
+ 
+/*----- Tabs -----*/
+.tabs {
+    width:100%;
+    display:inline-block;
+}
+ 
+    /*----- Tab Links -----*/
+    /* Clearfix */
+    .tab-links:after {
+        display:block;
+        clear:both;
+        content:'';
+    }
+ 
+    .tab-links li {
+        margin:0px 5px;
+        float:left;
+        list-style:none;
+    }
+ 
+        .tab-links a {
+            padding:9px 15px;
+            display:inline-block;
+            border-radius:3px 3px 0px 0px;
+            background:#7FB5DA;
+            font-size:16px;
+            font-weight:600;
+            color:#4c4c4c;
+            transition:all linear 0.15s;
+        }
+ 
+        .tab-links a:hover {
+            background:#a7cce5;
+            text-decoration:none;
+        }
+ 
+    li.active a, li.active a:hover {
+        background:#a7cce5;
+        color:#4c4c4c;
+    }
+ 
+    /*----- Content of Tabs -----*/
+    .tab-content {
+        padding:15px;
+        border-radius:3px;
+        box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
+        background:#fff;
+    } 
+    .tab {
+        display:none;
+    }
+ 
+    .tab.active {
+        display:block;
+    }
